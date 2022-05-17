@@ -1,25 +1,44 @@
 body {
-  background: #f8d7b0;
+  background: linear-gradient(275deg, rgba(181,55,139,0.8995973389355743) 2%, rgba(179,77,163,0.8939950980392157) 40%, rgba(24,23,23,0.969625350140056) 100%);
   display: flex;
   flex-direction: column;
 }
+label{
+  font-size: medium;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+input{
+  border-radius: 20px !important;
+  outline-width: 0;
+  text-align: center;
+}
+
 
 div > h1 {
   float: right;
   margin: 0;
-  color: #5e1c06;
+  color: #1F2020;
+  font-family: 'Henny Penny', cursive;
 }
 h2 {
-  padding: 10px 10px 15px 10px;
+  padding: 10px 10px 5px 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-bottom: 2px solid black;
+  border-radius: 10px;
 }
 
 #clear {
   float: left;
-  background: white;
-  border: 2px solid #5e1c06;
+  background-color: #1F2020;
+  color: white;
+  cursor: pointer;
   font-size: 15px;
-  padding: 5px;
+  width: 15%;
   border-radius: 10px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -29,6 +48,20 @@ h2 {
 
 section {
   display: flex;
+
+}
+
+.options{
+  display: inline-flex;
+  margin-left: 100px;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.option{
+  border-right: 3px solid black;
+  padding-right: 5px;
+  
 }
 
 #work,
@@ -38,12 +71,16 @@ section {
   font-size: 15px;
 }
 
+input:focus{
+  box-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 40px whitesmoke;
+
+}
 hr {
   border: 0;
   clear: both;
   display: block;
   width: 96%;
-  background-color: #5e1c06;
+  background-color: #1F2020;
   height: 3px;
   margin-bottom: 1em;
 }
@@ -59,7 +96,7 @@ hr {
 
 #add > button,
 #edit > button {
-  background-color: #5e1c06;
+  background-color: #1F2020;
   color: white;
   cursor: pointer;
   font-size: 15px;
@@ -74,8 +111,17 @@ hr {
   float: right;
   margin: 5%;
   cursor: pointer;
+  opacity: 0;
 }
 
+.pin{
+  display: none;
+}
+#selected>.pin{
+  float: right;
+  display: block;
+  
+}
 section {
   margin: 0 10% 0 10%;
 }
@@ -86,14 +132,41 @@ section {
   margin: 2% 10px 0 10px;
   width: 30%;
   height: 350px;
-  background: white;
+  background: url('../assets/paper.png');
+  background-position: -5px -5px;
+  border-radius: 40px 0px 60px 0px;
+  
 }
 
+:is(.card1, .card2, .card3) h2{
+  text-align: center;
+}
 #selected {
-  background: #e5d4cd;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.884) 0px 47px 23px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+:is(.card1, .card2, .card3):hover{
+  
+  transform: scale(1.03);
+  transition: transform 0.3s ease-out;
+}
+
+li{
+  position: relative;
+}
 .delBtn{
   display: none;
+  right: 5;
+
+  position: absolute;
+}
+
+button{
+  border-radius: 60px !important;
+}
+
+button:hover {
+  box-shadow: 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 80px whitesmoke;
+  transition-delay: 0.3s;
 }

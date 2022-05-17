@@ -1,21 +1,23 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style.css" /><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
   <title>Worklist</title>
 </head>
 
 <body>
   <div id="header">
-    <h1>Today's Worklist</h1>
+    <h1 >Today's Worklist</h1>
     <button id="clear" onclick="clearWorkList()">Clear The Worklist</button>
-    <div>
-      <input type="radio" id="addWork" name="mode" value="add" onclick="changeMode()" checked />
-      <label for="addWork">Add Work</label>
-      <input type="radio" id="editTitle" name="mode" value="edit" onclick="changeMode()" />
-      <label for="editTitle">Change Card Title</label>
-      <input type="radio" id="delete" name="mode" value="delete" onclick="changeMode()" />
-      <label for="delete">Delete Work</label>
+    <div class="options">
+      <input type="radio"  id="addWork" name="mode" value="add" onclick="changeMode()" checked />
+      <label class="option" for="addWork">Add Work</label>
+      <input type="radio"  id="editTitle" name="mode" value="edit" onclick="changeMode()" />
+      <label class="option" for="editTitle">Change Card Title</label>
+      <input type="radio"  id="delete" name="mode" value="delete" onclick="changeMode()" />
+      <label  for="delete">Delete Work</label>
     </div>
   </div>
   <hr />
@@ -31,15 +33,20 @@
     <div class="card1" id="selected">
       <input type="radio" id="card1Selected" name="cardSelected" value="card1Selected" checked
         onclick="selectCard('card1')" />
-      <h2>Home</h2>
+        <img class="pin" src="assets/pin.png" width=40 height=40 alt="">
+        <h2>Home</h2>
       
     </div>
     <div class="card2" id="">
       <input type="radio" id="card2Selected" name="cardSelected" value="card2Selected" onclick="selectCard('card2')" />
+      <img class="pin" src="assets/pin.png" width=40 height=40 alt="">
+
       <h2>Shopping</h2>
     </div>
     <div class="card3" id="">
       <input type="radio" id="card3Selected" name="cardSelected" value="card3Selected" onclick="selectCard('card3')" />
+      <img class="pin" src="assets/pin.png" width=40 height=40 alt="">
+      
       <h2>Office</h2>
     </div>
   </section>

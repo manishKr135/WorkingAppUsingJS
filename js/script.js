@@ -166,7 +166,7 @@ function update() {
       let cardName = document.querySelector(`#${cardValue}`).parentNode.className;
     
         document.querySelector(`.${cardName} h2`).innerText = cardTitle.value
-       
+        options[0].checked = true;
         addSection.style.display = 'block';
         editSection.style.display = 'none';
         cardTitle.value = "";
@@ -176,9 +176,9 @@ function clearWorkList() {
     let card1Ul =  document.querySelector('.card1 ul')
     let card1U2 =  document.querySelector('.card2 ul')
     let card1U3 =  document.querySelector('.card3 ul')
-    card1Ul?card1Ul.remove(): "";
-    card1U2?card1U2.remove(): "";
-    card1U3?card1U3.remove(): "";
+    card1Ul?card1Ul.innerHTML="": "";
+    card1U2?card1U2.innerHTML="": "";
+    card1U3?card1U3.innerHTML="": "";
 
   
 }
